@@ -1,3 +1,4 @@
+import AppNav from './AppNav'
 import './globals.css'
 
 export const metadata = {
@@ -11,8 +12,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" data-theme="dark">
+      <body>
+        <AppNav />
+
+        <main className='container'>
+          {children}
+        </main>
+        
+      </body>
     </html>
   )
 }
